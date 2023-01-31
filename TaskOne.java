@@ -20,8 +20,7 @@ public class TaskOne {
 
 	public static void main(String[] args) {
 
-		int id;
-		int fl;
+		int id, fl;
 		char ans;
 
 		String buildingName;
@@ -39,7 +38,8 @@ public class TaskOne {
 		s1.insertData(2, "gSquare7", 8);
 		s1.displayData();
 
-		ans = gaveanswer();
+		Mymethods mm = new Mymethods();
+		ans = mm.gaveanswer();
 
 		if (ans == 'y') {
 			System.out.println("Enter new Data Here");
@@ -60,12 +60,14 @@ public class TaskOne {
 
 		} else if (ans == 'n') {
 			System.out.println("End Of the program");
-
 		} else {
-			// char abc;
-		}
 
+		}
 	}
+
+}
+
+class Mymethods {
 
 	public static char gaveanswer() {
 		char tempans;
@@ -74,4 +76,5 @@ public class TaskOne {
 		tempans = sc2.next().charAt(0);
 		return tempans;
 	}
+
 }
